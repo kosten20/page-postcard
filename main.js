@@ -1,4 +1,4 @@
-import Typed from './node_modules/typed.js/src/typed.js';
+import Typed from './src/typed.js';
 
 var typed = new Typed('.element', {
     strings: [
