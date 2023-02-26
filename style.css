@@ -1,0 +1,105 @@
+@font-face { 
+    font-family: "miama"; 
+    src: url("font/miama.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: miama;
+}
+.block__wrap {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    
+    grid-template: repeat(4, 15vw) / repeat(3, 24vw);
+    grid-template-areas:
+    "s . ."
+    ". number ."
+    "month month month"
+    "world world world";
+
+    font-weight: bolder;
+    font-size: 9vw;
+    color: red;
+
+    position: relative;
+}
+.block__wrap::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: .75;
+    z-index: -1;
+
+    background: url(img&video/images.jpg) no-repeat;
+    background-size: cover;
+}
+.block__s {
+    justify-self: end;
+    align-self: end;
+    grid-area: s;
+}
+.block__number {
+    justify-self: center;
+    grid-area: number;
+}
+.block__month {
+    justify-self: center;
+    grid-area: month;
+}
+.block__world {
+    justify-self: start;
+    grid-area: world;
+}
+.block-video {
+}
+.block-video__header {
+    color: red;
+    font-size: 6vw;
+    padding: 35px 0 50px 0;
+}
+.block-video video {
+    width: 90%;
+}
+.block-bg {
+    width: 95%;
+    height: 95%;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.8);
+}
+.block-bg-v {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer {
+    background: #222121;
+    height: 7vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
