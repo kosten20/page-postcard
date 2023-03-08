@@ -16,7 +16,7 @@ body {
   position: relative;
 
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   justify-content: center;
@@ -84,7 +84,7 @@ body {
 }
 .block-bg {
   width: 95%;
-  height: 95%;
+  min-height: 90%;
 
   border-radius: 15px;
 
